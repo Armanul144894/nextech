@@ -11,7 +11,7 @@ export default function CategoryHero() {
       ></div>
 
       <div className="relative z-10 container mx-auto text-center">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+        <h1 className="text-5xl md:text-7xl font-bold pb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
           Our Categories
         </h1>
         <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
