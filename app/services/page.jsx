@@ -8,7 +8,10 @@ import PricingService from './serviceComponent/PricingService'
 import Testimonial from './serviceComponent/Testimonial'
 import FAQSection from './serviceComponent/FAQSection'
 import CTASection from '../components/CTASection'
-
+export const metadata = {
+  title: "NexTech | Services",
+  description: "Transforming businesses with innovative technology and strategic excellence",
+};
 export default function Services() {
   return (
     <div className="min-h-screen bg-gray-800 text-white">
