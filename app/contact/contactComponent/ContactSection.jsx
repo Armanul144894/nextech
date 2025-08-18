@@ -253,7 +253,7 @@ export default function ContactSection() {
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl transform rotate-6"></div>
             <div className="relative bg-gray-800 rounded-3xl p-8 border border-gray-700">
               <div className="space-y-4">
-                <form>
+                {/* <form>
                   <div className="mb-5">
                     <label
                       for="name"
@@ -305,8 +305,8 @@ export default function ContactSection() {
                   >
                     Submit
                   </button>
-                </form>
-                {/* <ContactForm></ContactForm> */}
+                </form> */}
+                <ContactForm></ContactForm>
               </div>
             </div>
           </div>
