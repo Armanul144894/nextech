@@ -42,13 +42,15 @@ export default function PorcessSection() {
 
         <div className="relative">
           {/* Process Line */}
-          <div className="absolute top-16 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 hidden lg:block"></div>
+          <div className="absolute top-20 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 hidden lg:block"></div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {process.map((step, index) => (
               <div key={index} className="relative text-center group">
                 <div className="relative z-10 mb-6">
-                  <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform duration-300">
+                  <div className={`w-16 h-16  ${
+                      index % 2 === 0 ? "" : "lg:mt-24"
+                    } mx-auto rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform duration-300`}>
                     {step.step}
                   </div>
                 </div>

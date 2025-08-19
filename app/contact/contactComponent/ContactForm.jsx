@@ -8,27 +8,28 @@ export default function ContactForm() {
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label for="name" className="block mb-2 font-bold text-gray-100">
+        <label className="block mb-2 font-bold text-gray-100">
           Name
         </label>
         <input
           className="border border-gray-300 shadow p-3 w-full rounded mb-4 text-black"
           {...register("firstName", { required: true })}
         />
-        <label for="name" className="block mb-2 font-bold text-gray-100">
+        <label className="block mb-2 font-bold text-gray-100">
           Email
         </label>
         <input
           className="border border-gray-300 shadow p-3 w-full rounded mb-4 text-black"
           {...register("mail", { required: "Email Address is required" })}
         />
-        <label for="name" className="block mb-2 font-bold text-gray-100">
+        <label className="block mb-2 font-bold text-gray-100">
           Messages
         </label>
         <textarea
           name=""
           id=""
           className="border border-gray-300 shadow p-3 w-full rounded mb-4 text-black"
+          {...register("comments")}
           rows="4"
         ></textarea>
         <input

@@ -1,4 +1,5 @@
 "use client";
+import LoginSection from "@/components/LoginSection";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 export default function Navbar() {
@@ -68,6 +69,7 @@ export default function Navbar() {
               </Link>
             )
           )}
+          <LoginSection></LoginSection>
         </div>
 
         {/* Mobile Menu Button */}

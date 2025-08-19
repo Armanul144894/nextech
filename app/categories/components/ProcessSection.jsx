@@ -100,14 +100,14 @@ export default function ProcessSection() {
                           index % 2 === 0 ? "lg:text-right" : "lg:text-left"
                         }`}
                       >
-                        <div className={` ${
-                              index % 2 === 0
-                                ? "lg:flex flex-col justify-start items-end"
-                                : "lg:flex flex-col justify-start items-start"
-                            }`}>
-                          <div
-                            
-                          >
+                        <div
+                          className={` ${
+                            index % 2 === 0
+                              ? "lg:flex flex-col justify-start items-end"
+                              : "lg:flex flex-col justify-start items-start"
+                          }`}
+                        >
+                          <div>
                             <ProcessIcon className="mb-3" />
                           </div>
                           <div className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
@@ -122,7 +122,11 @@ export default function ProcessSection() {
                     </div>
 
                     <div className="hidden lg:block">
-                      <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-2xl font-bold shadow-lg">
+                      <div
+                        className={`w-16 h-16 ${
+                          index % 2 === 0 ? "lg:me-[80px]" : "lg:ms-[80px]"
+                        } rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-2xl font-bold shadow-lg`}
+                      >
                         {process.step}
                       </div>
                     </div>
