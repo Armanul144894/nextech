@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 export default function CategorySection({filteredCategories}) {
@@ -117,12 +118,13 @@ export default function CategorySection({filteredCategories}) {
                     </div>
 
                     {/* Action Button */}
+                    <Link href={`/categories/${category.id}`}>
                     <button className="w-full py-3 bg-gradient-to-r from-gray-700 to-gray-600 rounded-xl font-semibold group-hover:from-blue-500 group-hover:to-purple-600 transition-all duration-300 flex items-center justify-center">
                       Learn More
                       <div className="ml-2 group-hover:translate-x-1 transition-transform duration-300">
                         <ArrowRight />
                       </div>
-                    </button>
+                    </button></Link>
                   </div>
 
                   {/* Hover Effect Overlay */}

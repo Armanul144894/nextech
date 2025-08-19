@@ -61,7 +61,7 @@ export default function Navbar() {
             (item) => (
               <Link
                 key={item}
-                href={`${item.toLowerCase()}`}
+                href={`/${item.toLowerCase()}`}
                 className="relative group text-gray-300 hover:text-white transition-colors duration-300"
               >
                 {item}
@@ -89,7 +89,7 @@ export default function Navbar() {
               (item) => (
                 <Link
                   key={item}
-                  href={`${item.toLowerCase()}`}
+                  href={`/${item.toLowerCase()}`}
                   className="block text-gray-300 hover:text-white transition-colors duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
