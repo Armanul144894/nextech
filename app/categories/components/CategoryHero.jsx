@@ -12,11 +12,10 @@ export default function CategoryHero() {
 
       <div className="relative z-10 container mx-auto text-center">
         <h1 className="text-5xl md:text-7xl font-bold pb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-          Our Categories
+          Service Categories
         </h1>
         <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-          Comprehensive digital solutions designed to accelerate your business
-          growth and innovation
+          Explore our comprehensive range of digital services across different specializations
         </p>
         <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-semibold hover:scale-105 transition-all duration-300 shadow-lg">
           Explore Category

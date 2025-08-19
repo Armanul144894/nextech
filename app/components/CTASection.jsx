@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function CTASection() {
@@ -11,9 +12,11 @@ export default function CTASection() {
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
             Join hundreds of successful companies that trust us with their digital transformation journey
           </p>
+          <Link href={"/contact"}>
           <button className="px-12 py-4 bg-white text-blue-600 rounded-full font-bold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-white/25">
             Start Your Journey
           </button>
+          </Link>
         </div>
       </section>
   )
