@@ -51,24 +51,28 @@ export default function Navbar() {
     >
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
         <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-          <Link href={'/'}>NexTech</Link>
+          <Link href={"/"}>NexTech</Link>
         </div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <Link href={'/'} className="block text-gray-400 hover:text-white transition-colors duration-300">Home</Link>
-          {["Services", "About", "Categories", "Contact"].map(
-            (item) => (
-              <Link
-                key={item}
-                href={`/${item.toLowerCase()}`}
-                className="relative group text-gray-300 hover:text-white transition-colors duration-300"
-              >
-                {item}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 group-hover:w-full transition-all duration-300"></span>
-              </Link>
-            )
-          )}
+          <Link
+            href={"/"}
+            className="relative group text-gray-300 hover:text-white transition-colors duration-300"
+          >
+            Home{" "}
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 group-hover:w-full transition-all duration-300"></span>
+          </Link>
+          {["About", "Services", "Categories", "Contact"].map((item) => (
+            <Link
+              key={item}
+              href={`/${item.toLowerCase()}`}
+              className="relative group text-gray-300 hover:text-white transition-colors duration-300"
+            >
+              {item}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 group-hover:w-full transition-all duration-300"></span>
+            </Link>
+          ))}
           <LoginSection></LoginSection>
         </div>
 
@@ -85,18 +89,23 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-gray-900/95 backdrop-blur-md">
           <div className="container mx-auto px-6 py-4 space-y-4">
-            {["Services", "About", "Categories", "Contact"].map(
-              (item) => (
-                <Link
-                  key={item}
-                  href={`/${item.toLowerCase()}`}
-                  className="block text-gray-300 hover:text-white transition-colors duration-300"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item}
-                </Link>
-              )
-            )}
+            <Link
+              href={"/"}
+              className="block text-gray-300 hover:text-white transition-colors duration-300"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home
+            </Link>
+            {["About", "Services", "Categories", "Contact"].map((item) => (
+              <Link
+                key={item}
+                href={`/${item.toLowerCase()}`}
+                className="block text-gray-300 hover:text-white transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item}
+              </Link>
+            ))}
           </div>
         </div>
       )}

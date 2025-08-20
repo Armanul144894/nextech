@@ -1,77 +1,12 @@
 import React from "react";
+import { ArrowRight, Check, Code, Smartphone, TrendingUp } from "./icons/allServiceIcon";
+import Link from "next/link";
 
 export default function DetailService() {
-  // SVG Icons
-  const ArrowRight = () => (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-    >
-      <line x1="5" y1="12" x2="19" y2="12"></line>
-      <polyline points="12,5 19,12 12,19"></polyline>
-    </svg>
-  );
 
-  const Check = () => (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-    >
-      <polyline points="20,6 9,17 4,12"></polyline>
-    </svg>
-  );
-
-  const Code = ({ size = 32 }) => (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-    >
-      <polyline points="16,18 22,12 16,6"></polyline>
-      <polyline points="8,6 2,12 8,18"></polyline>
-    </svg>
-  );
-
-  const Smartphone = ({ size = 32 }) => (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-    >
-      <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-      <line x1="12" y1="18" x2="12.01" y2="18"></line>
-    </svg>
-  );
-
-  const TrendingUp = ({ size = 32 }) => (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-    >
-      <polyline points="23,6 13.5,15.5 8.5,10.5 1,18"></polyline>
-      <polyline points="17,6 23,6 23,12"></polyline>
-    </svg>
-  );
   const detailedServices = [
     {
+      id:1,
       title: "Custom Web Development",
       description:
         "Build powerful, scalable web applications tailored to your business needs",
@@ -85,8 +20,11 @@ export default function DetailService() {
       price: "Starting at $5,000",
       duration: "4-8 weeks",
       gradient: "from-blue-500 to-purple-600",
+      progress: 95,
+      width: "w-[95%]"
     },
     {
+      id:1,
       title: "Mobile App Development",
       description:
         "Native and cross-platform mobile applications for iOS and Android",
@@ -100,8 +38,11 @@ export default function DetailService() {
       price: "Starting at $8,000",
       duration: "6-12 weeks",
       gradient: "from-green-500 to-blue-500",
+      progress: 90,
+      width: "w-[90%]"
     },
     {
+      id:2,
       title: "Digital Marketing",
       description:
         "Comprehensive digital marketing strategies to grow your online presence",
@@ -115,6 +56,8 @@ export default function DetailService() {
       price: "Starting at $2,000/month",
       duration: "Ongoing",
       gradient: "from-purple-500 to-pink-500",
+      progress: 75,
+      width: "w-[75%]"
     },
   ];
   return (
@@ -175,9 +118,10 @@ export default function DetailService() {
                     </div>
                   </div>
 
+                  <Link href={`/services/${service.id}`}>
                   <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-semibold hover:scale-105 transition-all duration-300 flex items-center">
                     Get Started <ArrowRight />
-                  </button>
+                  </button></Link>
                 </div>
 
                 <div className="flex-1">
@@ -200,12 +144,12 @@ export default function DetailService() {
                           <div className="flex justify-between items-center mb-4">
                             <span className="text-gray-400">Progress</span>
                             <span className="text-blue-400 font-semibold">
-                              95%
+                              {service.progress}%
                             </span>
                           </div>
                           <div className="w-full bg-gray-700 rounded-full h-2">
                             <div
-                              className={`bg-gradient-to-r ${service.gradient} h-2 rounded-full w-11/12 transition-all duration-1000`}
+                              className={`bg-gradient-to-r ${service.gradient} h-2 rounded-full ${service.width} transition-all duration-1000`}
                             ></div>
                           </div>
                         </div>

@@ -11,7 +11,7 @@ export const metadata = {
 export default function AboutUs() {
     
   return (
-    <div className='min-h-screen bg-gray-100 text-white'>
+    <div className='min-h-screen bg-gray-800 text-white'>
         <AboutHero></AboutHero>
         <AboutSection></AboutSection>
         <Stats></Stats>
