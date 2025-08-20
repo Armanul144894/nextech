@@ -15,13 +15,13 @@ export const metadata = {
 export default function page() {
   return (
     <div className='min-h-screen bg-gray-100 text-white'>
-        <CategoryHero></CategoryHero>
-        <FilterCategory></FilterCategory>
-        <StatisticsSection></StatisticsSection>
-        <PopularCategory></PopularCategory>
-        <TechnologySection></TechnologySection>
-        <ProcessSection></ProcessSection>
-        <CallSection></CallSection>
+        <CategoryHero/>
+        <FilterCategory/>
+        <StatisticsSection/>
+        <PopularCategory/>
+        <TechnologySection/>
+        <ProcessSection/>
+        <CallSection/>
         <ContactSection/>
     </div>
   )

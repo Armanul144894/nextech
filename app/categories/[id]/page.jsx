@@ -227,7 +227,7 @@ export default function CategoryDetailsPage({ params }) {
             >
               <Icon size={40} />
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold pb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
               {selectedCategory.title}
             </h1>
             <p className="text-xl md:text-2xl text-gray-400 mb-8 leading-relaxed max-w-3xl mx-auto">
