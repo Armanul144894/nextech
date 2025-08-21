@@ -71,7 +71,7 @@ export default function Category() {
   return (
     <section id="categories" className="py-20 px-6">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             Our Expertise
           </h2>

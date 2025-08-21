@@ -1,4 +1,8 @@
 import React from "react";
+import { Brain, Cloud, Code } from "../services/serviceComponent/icons/allServiceIcon";
+import Link from "next/link";
+import { ShieldIcon } from "../about/components/icons/AboutIcon";
+import { Shield } from "./icons/allIcons";
 
 export default function Service() {
   // SVG Icons as components
@@ -17,84 +21,35 @@ export default function Service() {
     </svg>
   );
 
-  const Zap = ({ size = 24 }) => (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-    >
-      <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"></polygon>
-    </svg>
-  );
-
-  const Shield = ({ size = 24 }) => (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-    >
-      <path d="M12,22s8-4 8-10V5l-8-3-8,3v7c0,6 8,10 8,10z"></path>
-    </svg>
-  );
-
-  const Globe = ({ size = 24 }) => (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-    >
-      <circle cx="12" cy="12" r="10"></circle>
-      <line x1="2" y1="12" x2="22" y2="12"></line>
-      <path d="M12,2a15.3,15.3 0 0 1 4,10 15.3,15.3 0 0 1 -4,10 15.3,15.3 0 0 1 -4,-10 15.3,15.3 0 0 1 4,-10z"></path>
-    </svg>
-  );
-
-  const Star = ({ size = 24 }) => (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-    >
-      <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26 12,2"></polygon>
-    </svg>
-  );
 
   const services = [
     {
-      title: "Digital Strategy",
+      id:1,
+      title: "Development",
       description:
         "Transform your business with cutting-edge digital solutions",
-      icon: Zap,
+      icon: Code,
       gradient: "from-blue-400 to-blue-600",
     },
     {
-      title: "Cloud Solutions",
+      id:2,
+      title: "Cloud & Infrastructure",
       description: "Scalable cloud infrastructure for modern businesses",
-      icon: Globe,
+      icon: Cloud,
       gradient: "from-green-400 to-green-600",
     },
     {
-      title: "Cybersecurity",
+      id:3,
+      title: "Security",
       description: "Protect your digital assets with enterprise-grade security",
       icon: Shield,
       gradient: "from-purple-400 to-purple-600",
     },
     {
-      title: "AI Integration",
+      id:4,
+      title: "AI & Analytics",
       description: "Leverage artificial intelligence to automate and optimize",
-      icon: Star,
+      icon: Brain,
       gradient: "from-orange-400 to-orange-600",
     },
   ];
@@ -127,9 +82,11 @@ export default function Service() {
                   </div>
                   <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                   <p className="text-gray-400 mb-6">{service.description}</p>
-                  <button className="text-blue-400 hover:text-blue-300 font-semibold flex items-center group-hover:translate-x-2 transition-transform duration-300">
+                  <Link href={`/services/${service.id}`}>
+                      <button className="text-blue-400 hover:text-blue-300 font-semibold flex items-center group-hover:translate-x-2 transition-transform duration-300">
                     Learn More <ArrowRight size={16} className="ml-2" />
                   </button>
+                  </Link>
                 </div>
               </div>
             );

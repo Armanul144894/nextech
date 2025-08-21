@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 
 export default function HeroSection() {
@@ -49,13 +50,17 @@ export default function HeroSection() {
             Transforming businesses with innovative technology and strategic excellence
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{animationDelay: '1s'}}>
+            <Link href={'/services'}>
             <button className="flex items-center justify-center gap-2 px-10 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-blue-500/25">
               Get Started
               <ArrowRight className="inline ml-2" size={20} />
             </button>
+            </Link>
+            <Link href={'/about'}>
             <button className="px-10 py-4 border border-gray-600 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
               Learn More
             </button>
+            </Link>
           </div>
         </div>
 

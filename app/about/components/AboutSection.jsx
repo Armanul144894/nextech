@@ -1,52 +1,7 @@
 import React from "react";
+import { AwardIcon, GlobeIcon, UsersIcon } from "./icons/AboutIcon";
 
 export default function AboutSection() {
-  // SVG Icons as components
-
-  const Globe = ({ size = 24 }) => (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-    >
-      <circle cx="12" cy="12" r="10"></circle>
-      <line x1="2" y1="12" x2="22" y2="12"></line>
-      <path d="M12,2a15.3,15.3 0 0 1 4,10 15.3,15.3 0 0 1 -4,10 15.3,15.3 0 0 1 -4,-10 15.3,15.3 0 0 1 4,-10z"></path>
-    </svg>
-  );
-
-  const Award = ({ size = 24 }) => (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-    >
-      <circle cx="12" cy="8" r="7"></circle>
-      <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"></polyline>
-    </svg>
-  );
-
-  const Users = ({ size = 24 }) => (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-    >
-      <path d="M17,21v-2a4,4 0 0 0-4-4H5a4,4 0 0 0-4,4v2"></path>
-      <circle cx="9" cy="7" r="4"></circle>
-      <path d="M23,21v-2a4,4 0 0 0-3-3.87"></path>
-      <path d="M16,3.13a4,4 0 0 1 0,7.75"></path>
-    </svg>
-  );
 
   return (
     <section id="about" className="py-20 px-6">
@@ -63,9 +18,9 @@ export default function AboutSection() {
             </p>
             <div className="space-y-6">
               {[
-                { icon: Users, text: "500+ Happy Clients", number: "500+" },
-                { icon: Award, text: "Industry Awards", number: "25+" },
-                { icon: Globe, text: "Countries Served", number: "40+" },
+                { icon: UsersIcon, text: "500+ Happy Clients", number: "500+" },
+                { icon: AwardIcon, text: "Industry Awards", number: "25+" },
+                { icon: GlobeIcon, text: "Countries Served", number: "40+" },
               ].map((stat, index) => {
                 const Icon = stat.icon;
                 return (
